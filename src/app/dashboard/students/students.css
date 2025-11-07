@@ -1,0 +1,103 @@
+.students-container {
+  background-color: #fdfdf5;
+  color: #13213b;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.students-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #13213b;
+}
+
+.students-btn {
+  background-color: #3d5690;
+  color: #fdfdf5;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.students-btn:hover {
+  background-color: #5e93c5;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #9fbaf1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.students-table th,
+.students-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #fdfdf5;
+}
+
+.students-table th {
+  background-color: #3d5690;
+  color: #fdfdf5;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fdfdf5;
+  margin-right: 0.5rem;
+}
+
+.edit-btn {
+  background-color: #5e93c5;
+}
+
+.delete-btn {
+  background-color: #13213b;
+}
+
+.students-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 33, 59, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.students-modal-content {
+  background-color: #fdfdf5;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.students-modal-content input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.4rem 0;
+  border: 1px solid #9fbaf1;
+  border-radius: 6px;
+}
+
+.cancel-btn {
+  background-color: #f1fea2;
+  color: #13213b;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
