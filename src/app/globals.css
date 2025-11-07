@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
+/*Paleta de colores personalizada */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores base */
+  --background: #FDFDF5;       /* Fondo principal */
+  --foreground: #13213B;       /* Texto principal */
+
+  /* Temas */
+  --primary: #3D5690;          /* Botones, links */
+  --secondary: #5E93C5;        /* Hover, acentos */
+  --accent: #F1FEA2;           /* Énfasis o detalles */
+  --surface: #9FBAF1;          /* Fondo alterno o tarjetas */
+
+  /* Notificaciones */
+  --success: #F1FEA2;          /* Éxito */
+  --error: #13213B;            /* Error */
+  --info: #5E93C5;             /* Información */
 }
 
+/* 🌙 Modo oscuro opcional */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #13213B;
+    --foreground: #FDFDF5;
+  }
+}
+
+/* 🧠 Configuración de Tailwind */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-info: var(--info);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/*Estilos base */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ====== React Toastify ====== */
+.Toastify__toast {
+  border-radius: 0.75rem !important;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__toast--success {
+  background-color: var(--success) !important;
+  color: var(--foreground) !important;
+}
+
+.Toastify__toast--error {
+  background-color: var(--error) !important;
+  color: var(--background) !important;
+}
+
+.Toastify__toast--info {
+  background-color: var(--info) !important;
+  color: var(--background) !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--secondary) !important;
+}
+
+
+/* Alertas personalizadas */
+.alert-success {
+  background-color: var(--success);
+  color: var(--foreground);
+}
+.alert-error {
+  background-color: var(--error);
+  color: var(--background);
+}
+.alert-info {
+  background-color: var(--info);
+  color: var(--background);
 }
